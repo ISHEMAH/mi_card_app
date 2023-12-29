@@ -13,31 +13,39 @@ void main() {
 //       home: Scaffold(
 //         backgroundColor: Colors.teal,
 //         body: SafeArea(
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.end,
+//           child: Row(
+//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //             children: <Widget>[
 //               Container(
+//                 width: 100.0,
+//                 height: double.infinity,
+//                 color: Colors.red,
+//               ),
+//               Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: <Widget>[
+//                   Container(
+//                 width: 100.0,
 //                 height: 100.0,
-//             width: 100.0,
-//             color: Colors.white,
-//             child:const Text('Hugogo'),
-//           ),
-//           Container(
+//                 color: Colors.yellow,
+//               ),
+//               Container(
+//                 width: 100.0,
 //                 height: 100.0,
-//             width: 100.0,
-//             color: Colors.red,
-//             child:const Text('Hugogo'),
+//                 color: const Color.fromARGB(70, 255, 235, 59),
+//               ),
+//                 ],
+//               ),
+
+//               Container(
+//                 width: 100.0,
+//                 height: double.infinity,
+//                 color: Colors.blue,
+//               ),
+//             ],
 //           ),
-//           Container(
-//                 height: 100.0,
-//             width: 100.0,
-//             color: Colors.yellow,
-//             child:const Text('Hugogo'),
-//           ),
-//             ]
-//           ,)
+//         ),
 //       ),
-//     )
 //     );
 //   }
 // }
@@ -47,42 +55,80 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: const Color.fromARGB(255, 33, 0, 40),
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.red,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage("images/profile.jpg"),
+            ),
+            Text(
+              'Kivumbi King',
+              style: TextStyle(
+                fontFamily: 'Adoreles',
+                fontSize: 40.0,
+                color: Colors.white,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.yellow,
+            ),
+            Text(
+              'RWANDAN ARTIST',
+              style: TextStyle(
+                fontFamily: 'DMSans',
+                fontSize: 20.0,
+                color: Color.fromARGB(120, 255, 255, 255),
+                fontWeight: FontWeight.w200,
+                letterSpacing: 0.0,
               ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: const Color.fromARGB(70, 255, 235, 59),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Color.fromARGB(67, 255, 255, 255),
               ),
-                ],
-              ),
-              
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
-              ),
-            ],
-          ),
-        ),
+            ),
+            Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Color.fromARGB(255, 33, 0, 40),
+                    size: 30.0,
+                  ),
+                  title: Text(
+                    '+2507833499243',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'DMSans',
+                      fontSize: 16.0,
+                    ),
+                  ),
+                )),
+            Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Color.fromARGB(255, 33, 0, 40),
+                    size: 30.0,
+                  ),
+                  title: Text(
+                    'julien@gmail.com',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'DMSans',
+                      fontSize: 16.0,
+                    ),
+                  ),
+                )),
+          ],
+        )),
       ),
     );
   }
